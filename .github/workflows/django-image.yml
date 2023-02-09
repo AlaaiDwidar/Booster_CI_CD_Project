@@ -22,5 +22,5 @@ jobs:
     - name: Run Tests
       run: |
         docker build . -f Dockerfile -t alaadwidar/django-app:v1.0
-        docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+        docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASS }}
         docker push alaadwidar/django-app:v1.0
